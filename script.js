@@ -1,17 +1,15 @@
-class Circle {
-    constructor(radius) {
-        this.radius = radius;
+const arrows = document.querySelectorAll('.arrow'),
+redSlide = document.querySelector('.slider--red'),
+blueSlide = document.querySelector('.slider--blue');
 
-    }
-
-    getArea() {
-        return Math.PI * Math.pow(this.radius, 2);
-    }
-    getPerimeter() {
-        return 2*Math.PI*this.radius;
-    }
-}
-
-const circle = new Circle(11);
-
-console.log(circle.getPerimeter());
+arrows.forEach((arrow)=>{
+    arrow.addEventListener('click', ()=>{
+        if (redSlide.classList.contains('slider__hidden')){
+            redSlide.classList.remove('slider__hidden');
+            blueSlide.classList.add('slider__hidden');
+        } else if (blueSlide.classList.contains('slider__hidden')){
+            redSlide.classList.add('slider__hidden');
+            blueSlide.classList.remove('slider__hidden');
+        }
+    });
+});
