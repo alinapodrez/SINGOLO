@@ -27,6 +27,80 @@ header {
   justify-content: center;
 }
 
+.burger {
+  width: 278px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #2D303A;
+  box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.header__burger {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  margin-top: 24px;
+  
+}
+
+.burger__lines {
+  position: relative;
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #DEDEDE;
+  margin-right: 28px;
+  margin-left: 20px;
+
+}
+
+.burger__lines::before, .burger__lines::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #DEDEDE;
+}
+
+.burger__lines::before{
+  top: -6.5px;
+}
+
+.burger__lines::after{
+  bottom: -7px;
+}
+
+.burger__menu {
+  font-size: 24px;
+}
+
+.burger__logo {
+  font-size: 19.69px;
+}
+
+.burger__nav {
+  margin-top: 50%;
+  margin-left: 71px;
+}
+
+.burger__menu .nav__item {
+  padding-bottom: 27px;
+}
+
+.burger__menu .nav__item:after {
+  display: none;
+}
+
+.burger__menu .nav__list {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .header__wrapper {
   width: 100%;
   max-width: 1020px;
@@ -47,7 +121,6 @@ header {
 
 li.red:hover {
   color: white;
-  text-decoration: underline;
 }
 
 .nav__list {
@@ -65,6 +138,7 @@ li.red:hover {
 
 .nav__item:hover {
   color: #f06c64;
+  transform: scale(1.02);
 }
 
 .nav__item:after {
