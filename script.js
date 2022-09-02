@@ -13,3 +13,14 @@ arrows.forEach((arrow)=>{
         }
     });
 });
+
+const burger = document.querySelector(".header__burger")
+if (burger) {
+    const menu = document.querySelector(".burger__menu");
+    const main = document.querySelector("main");
+    burger.addEventListener("click", ()=>{
+        burger.classList.toggle('_active');
+        menu.classList.toggle('_active');
+        main.classList.toggle('_lock');
+    });
+}
